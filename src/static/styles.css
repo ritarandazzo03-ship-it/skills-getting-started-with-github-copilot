@@ -63,6 +63,12 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(26, 35, 126, 0.08);
 }
 
 .activity-card h4 {
@@ -72,6 +78,85 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+/* Participants section */
+.participants-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+.participants-section h5 {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Bulleted list with pretty chips */
+.participants-list {
+  list-style: none; /* hide bullets */
+  margin-left: 0; /* remove left indent */
+  padding-left: 0;
+  display: block;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.participants-list li {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+  color: #444;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  border: 1px solid #eee;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+.participant-email {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Delete button next to each participant */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.participant-delete:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+/* Fallback text when no participants */
+.no-participants {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Slight tweak for capacity & schedule text */
+.activity-card .schedule,
+.activity-card .capacity {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
 }
 
 .form-group {
