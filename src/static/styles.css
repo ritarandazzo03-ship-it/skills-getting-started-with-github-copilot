@@ -63,6 +63,12 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(26, 35, 126, 0.08);
 }
 
 .activity-card h4 {
@@ -72,6 +78,57 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+/* Participants section */
+.participants-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+.participants-section h5 {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Bulleted list with pretty chips */
+.participants-list {
+  list-style: disc;
+  margin-left: 1.2rem;
+  display: block;
+  padding-left: 0.6rem;
+  margin-bottom: 0;
+}
+
+.participants-list li {
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+  color: #444;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  border: 1px solid #eee;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+/* Fallback text when no participants */
+.no-participants {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Slight tweak for capacity & schedule text */
+.activity-card .schedule,
+.activity-card .capacity {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
 }
 
 .form-group {
